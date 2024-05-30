@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import localFont from "next/font/local";
 
 export const metadata: Metadata = {
   title: "Taskify",
@@ -9,6 +10,12 @@ export const metadata: Metadata = {
   },
 };
 
+const pretendard = localFont({
+  src: "./fonts/pretendard-variable.woff2",
+  display: "swap",
+  weight: "45 920",
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -16,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body>{children}</body>
+      <body className={pretendard.className}>{children}</body>
     </html>
   );
 }
