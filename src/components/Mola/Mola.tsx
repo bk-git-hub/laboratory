@@ -31,7 +31,7 @@ const Mola = async () => {
       </div>
     );
   }
-
+  if (!session.accessToken) return null;
   const data = await getData(session.accessToken);
 
   return (
