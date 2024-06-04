@@ -1,9 +1,3 @@
-import Mola from "@/components/Mola/Mola";
-
 export default function Home() {
-  return (
-    <main>
-      <Mola />
-    </main>
-  );
+  return <main>홈페이지</main>;
 }
